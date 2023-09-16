@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* || Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* || VARIABLES */
+
+:root{
+    /* FONTS */
+    --FF: 'Poppins', sans-serif;
+
+    /* ||COLORS */
+    --CARD-BGCOLOR: linear-gradient(130deg, #5271FF, #3DF5FA);
+    --BODY-BGCOLOR: #1E1C1F;
+    --ERROR-BGCOLOR: darkred;
+    --ERROR-COLOR: white;
+}
+/* ||General Style */
+body {
+    background-color: var(--BODY-BGCOLOR);
+    font-family: var(--FF);
+    font-weight: bold;
+}
+
+
+/* ||Main */
+.card {
+    max-width: 100%;
+    margin-top: 0;
+    height: 100vh;
+    margin: auto;
+    background: var(--CARD-BGCOLOR);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+    margin: 4rem auto 2rem;
+
+}
+
+.search-box input {
+    width: 90%;
+    height: 3.7rem;
+    border-radius: 40px;
+    border: 0;
+    outline: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+}
+
+.search-box button {
+    padding: 0 1.5rem;
+    border-radius: 50%;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-box button img {
+    width: 1rem;
+}
+
+
+.weather-icon {
+    width: 170px;
+}
+
+.temp {
+    font-size: 50px;
+    text-align: center;
+}
+
+.city {
+    font-size: 28px;
+    text-align: center;
+}
+
+.col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col-container {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 2rem 0 3rem;
+}
+
+.col p {
+    padding-left: 10px;
+}
+
+.col img {
+    width: 2.5rem;
+}
+
+.humidity, .wind {
+    padding-bottom: 6px;
+    font-size: 22px;
+}
+
+.weather {
+    display: none;
+
+}
+
+.error {
+    display: none;
+    background-color: var(--ERROR-BGCOLOR);
+    font-weight: bold;
+    padding: 5px 25px;
+    color: var(--ERROR-COLOR);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+
+/* || MEDIUM */
+@media screen and (min-width: 768px) {
+.card {
+    max-width: 70%;
+    height: auto;
+    border-radius: 15px;
+    margin: 10vh auto;
+    height: auto;
+}
+
+.col-container {
+    width: 80%;
+}
+
+.temp {
+    font-size: 82px;
+}
+
+.city {
+    font-size: 46px;
+}
+.humidity, .wind {
+    font-size: 29px;
+}
+
+}
+
+/* || LARGE */
+@media screen and (min-width: 992px) {
+.card {
+        width: 90%;
+        max-width: 476px;
+        display: flex;
+    }
+
+.search-box {
+    margin: 2rem auto 2rem;
+
+}}
